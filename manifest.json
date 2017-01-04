@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "Captcha_autofill",
+  "version": "1.0",
+
+  "description": "Autofill captcha matching joinindianarmy.nic.in.",
+  "browser_action": {
+      "default_title": "Autofill captcha matching joinindianarmy.nic.in.",
+      "default_icon": "icons/captchaautofill.png"
+  },
+  "permissions": ["*://*.joinindianarmy.nic.in/*"],
+
+   "content_scripts": [
+    {
+      "matches": ["*://*.joinindianarmy.nic.in/*"],
+      "js": ["autofill.js"]
+    }
+  ]
+
+}
